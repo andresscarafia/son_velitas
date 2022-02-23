@@ -1,8 +1,13 @@
+# hashbang python (#!/usr/bin/env python3)?
 #clases.py
 
-''' En este archivo incluyo las clases con las que trabajar para este proyecto'''
+''' En este archivo incluyo las clases con las que trabajar para este
+proyecto, y sus instancias'''
 
 class Insumo:
+	''' Clase que engloba los insumos necesarios para la elaboracion de
+	los productos a vender'''
+
 	def __init__(self, nombre, stock, unidad):
 	    self.nombre = nombre
 	    self.stock = stock
@@ -18,11 +23,24 @@ class Insumo:
 		self.stock -= cantidad
 		print(f'Quedan {self.stock} {self.unidad} de {self.nombre}')
 
+	def comprar(self, cantidad):
+		self.stock += cantidad
+		print(f'Quedan {self.stock} {self.unidad} de {self.nombre}')
+
+#Instancias de Insumo
+cera = Insumo('Cera de soja', 5, 'KG')
+pabilo = Insumo('Pabilo para cera de soja', 2, 'M')
+chapita = Insumo('Chapita para velas', 100, 'Un.')
+vaso = Insumo('Vaso para vela', 12, 'Un.')
+esencia = Insumo('Esencia para vela', 200, 'CC')
+
 lista_de_insumos_vela = ['cera', 'pabilo', 'chapita', 'vaso', 'esencia']
 lista_de_insumos_difusor = ['alcohol', 'vial', 'tapa', 'esencia difusor']
 
 class Producto:
+
 	pass
+
 
 
 class Vela(Producto):
