@@ -37,14 +37,25 @@ esencia = Insumo('Esencia para vela', 200, 'CC')
 lista_de_insumos_vela = ['cera', 'pabilo', 'chapita', 'vaso', 'esencia']
 lista_de_insumos_difusor = ['alcohol', 'vial', 'tapa', 'esencia difusor']
 
+
+
 class Producto:
+	def __init__(self, nombre, stock, precio):
+		self.nombre = nombre
+		self.stock = stock
+		self.precio = precio
 
-	pass
+	def __str__(self):
+		return f''
+
+	def __repr__(self):
+		return f''
 
 
+class Vela(Producto): #REvisar
+	def __init__(self, nombre, stock, precio, tipo):
+		super().__init__(nombre, stock, precio)
+		self.tipo = tipo
 
-class Vela(Producto):
-	pass
-
-class Difusor(Producto):
+class Difusor:
 	pass
